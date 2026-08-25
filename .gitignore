@@ -1,0 +1,10 @@
+# Lista blanca: nada entra salvo lo que se habilita abajo.
+# plan.md, handoffs/, prompt-arranque.md y CLAUDE.md son internos y nunca se publican.
+*
+!.gitignore
+!README.md
+!LICENSE
+!metodo/
+!metodo/**
+!fichas/
+!fichas/**
