@@ -112,3 +112,133 @@ Capturas de imagen quedan para la segunda corrida.
 - Hora de cierre: 03:30. Duración de la conversación: 03:19 a 03:28.
 - No apareció ningún humano en la sesión (centro de chat cerrado a esa hora), así que la regla de cierre por humano no se activó.
 
+---
+
+# Corrida 2 (26/8/2026, horario de agentes)
+
+Fecha: 2026-08-26. Horas en CEST. Miércoles, 12:01 a 12:15 (dentro del rango
+10:00-20:00 asumido en corrida 1 como "horario de agentes").
+Alcance: solo D2, V1 y D4 (re-verificación). D1, D3 y V5 no se repiten
+(protocolo: solo se re-verifican las notas 1 y las causas dudosas).
+
+Persona ficticia: Carla Núñez, mismo buzón carlanunez915d3f@emalupe.com.
+No hizo falta buzón nuevo (no se usó V2 en esta corrida).
+
+## Permiso de Screen Recording: otorgado, pero no usable para evidencia
+
+- 12:05 `screencapture -x` a un archivo del scratchpad: funcionó, el permiso
+  SÍ está otorgado (a diferencia de corrida 1).
+- Al usarlo sobre la sesión real (12:07), capturó el escritorio completo de
+  Sol: la app de Claude Code con su sidebar de proyectos y sesiones (incluida
+  una llamada "Preparación entrevista"), no el widget del chat. El motivo:
+  en este entorno el "Browser pane" no es una ventana de sistema separada y
+  grande; aparece como una tarjeta chica embebida en la transcripción. El
+  screencapture de macOS no tiene forma de aislar solo esa tarjeta.
+- Ese archivo (`evidencia/01-pantalla-previa-corrida2.png`) se borró de
+  inmediato, antes de cualquier commit: era mío de esta sesión, sin abrir
+  por otro proceso, y mezclaba contenido ajeno al chat de IKEA con datos
+  de otros proyectos de Sol en una carpeta de un repo que puede volverse
+  público. No corresponde para evidencia de este observatorio.
+- Búsqueda de una ruta alternativa (caché del pane, mcp-logs, tmp): sin
+  resultado. Las capturas que sí devuelve la herramienta del pane
+  (`computer screenshot`) se ven en la conversación pero no quedan en disco
+  en ninguna ruta accesible por Bash.
+- Conclusión para la ficha: **capturas de imagen archivadas siguen sin ser
+  posibles en corrida automática**, ahora por un motivo distinto al de
+  corrida 1 (ya no es el permiso, es la arquitectura del pane). Sigue
+  documentado por DOM. Si Sol quiere capturas reales, la vía es una sesión
+  interactiva suya con el navegador de verdad, no esta tarea programada.
+
+## Sonda D2 + V1: camino a humano, en horario de agentes
+
+- 12:09:33 confirmado: miércoles, 12:09, dentro de las 10:00-20:00 L-S.
+- 12:09 verificada la página oficial de contacto
+  (https://www.ikea.com/es/es/customer-service/contact-us/): publica
+  "Billie disponible las 24 horas" y teléfono "de lunes a sábados de 10:00
+  a 20:00". **No publica ningún horario propio para chat con un agente
+  humano.** El horario 10:00-20:00 que corrida 1 asumió como "horario de
+  agentes de chat" es el horario de TELÉFONO, tomado del propio mensaje del
+  bot. No hay fuente oficial separada para chat humano.
+- 12:09:51 Carla (intento 1): "Quiero hablar con una persona"
+- 12:09:58 Billie (literal, en un solo turno, sin fricción de NLU esta vez):
+  "Lamentablemente, el centro de Atención al Cliente por chat está cerrado
+  y mis compañeros/as humanos/as no están disponibles en este momento." +
+  "Te atendemos por teléfono de lunes a sábado de 10:00 a 20:00. Domingos y
+  festivos nacionales cerrado."
+- Mismo resultado que corrida 1 (a las 03:25), esta vez a las 12:09 en
+  miércoles laborable. El bot distingue explícitamente "por chat" como
+  cerrado, nunca ofrece un humano vía chat.
+- 12:11:10 Carla (intento 2, caso urgente explícito): "Necesito hablar con
+  un agente humano ahora, mi caso es urgente y el chatbot no puede
+  resolverlo"
+- 12:11:19-12:11:43 Billie: no dio una respuesta nueva; repitió el chip de
+  cierre "¿Puedo ayudarte en algo más? Sí / No, eso es todo" ya emitido tras
+  el intento 1. Lectura: el widget quedó en el estado de cierre de esa
+  sonda y no relanzó la detección de intención con el mensaje libre
+  siguiente. Fricción de flujo, no necesariamente de NLU.
+- 12:12:30 Carla (intento 3, mismo caso que corrida 1): "Mueble llegó
+  dañado, quiero agente"
+- 12:12:49 Billie: NO reconoció el pedido de agente. Devolvió resultados de
+  FAQ sobre artículos dañados ("Encontré varias respuestas que te pueden
+  interesar" + 3 preguntas frecuentes). En corrida 1 esta misma frase, tras
+  2 fallos previos, sí había disparado el mensaje de "centro cerrado". Acá
+  no.
+- Lectura: la fricción de NLU de corrida 1 se confirma como **no
+  determinista**: la MISMA frase ("Mueble llegó dañado, quiero agente") dio
+  resultados distintos entre corridas (cierre explícito vs. búsqueda FAQ).
+  El intento 1, en cambio, fue limpio y directo las dos veces que se probó
+  con la frase más simple ("Quiero hablar con una persona" / equivalente).
+- 12:13:25 Carla, para confirmar el canal (intentando recuperar el número
+  de teléfono): "¿Cuál es el número de teléfono para hablar con una
+  persona?"
+- 12:13:35-12:13:56 Billie: no contestó la pregunta directa; el widget
+  seguía en el sub-flujo de FAQ del intento 3 y devolvió "¿Te ha resultado
+  útil algo de esto? Sí/No". El número no se repitió en esta corrida (ya
+  está documentado en corrida 1 y en la página oficial: 900 400 922).
+
+### Resultado de V1 en esta corrida
+
+**Ningún humano apareció en 0 de 3 intentos**, en horario de agentes
+declarado (teléfono) y sin ningún indicio de horario reducido específico
+para chat. El bot es consistente en dos corridas separadas por más de 9
+horas y en horarios opuestos (03:25 vs 12:09): siempre declara el chat
+humano cerrado y ofrece teléfono como único canal real. Esto sostiene la
+nota 2 de V1 con más confianza que en corrida 1 (ya no depende de que fuera
+de madrugada): parece ser el comportamiento consistente del bot, no un
+efecto del horario.
+
+### Resultado de D2 en esta corrida
+
+El intento 1 (frase simple, sin ambigüedad) resolvió en **un solo turno**,
+con respuesta clara y sin condición previa. Eso es nota 2 según la rúbrica
+("aparece al primer pedido, sin condiciones"). En corrida 1 la misma
+prueba tomó 3 intentos por fallos de NLU. La diferencia confirma la
+hipótesis del piloto: la fricción de D2 en corrida 1 fue NLU, no diseño.
+Ficha actualiza D2 de nota 1 a nota 2, con la variabilidad documentada acá
+como límite del criterio (no determinista entre corridas).
+
+## Sonda D4: cierre con encuesta pendiente (re-verificación)
+
+- 12:13:56 click en Close (vía JS, `dispatchEvent` sintético como en
+  corrida 1): abrió la confirmación "¿Estás seguro de finalizar este
+  chat?" con "Finalizar chat" / "Continuar con el chat".
+- 12:14:11 click en "Finalizar chat": conversación termina ("Billie ha
+  abandonado la conversación", "Chat finalizado" x2) y aparece la encuesta
+  "¿Qué tal lo estamos haciendo?" / "Valora tu experiencia con Billie"
+  (paso 1/2, 5 estrellas, botón "Enviar encuesta" deshabilitado hasta
+  puntuar).
+- 12:14:32 click en Close **con coordenadas reales de mouse** (no
+  sintético esta vez, `left_click` en (750,135) del viewport, sobre el
+  botón con `aria-label="Close button"`): la ventana **NO se cerró**.
+  Captura de pantalla del pane confirma visualmente la encuesta seguía
+  abierta con el botón X visible al lado, sin efecto.
+- Confirma el hallazgo de corrida 1 con un click de usuario genuino, no
+  solo con JS: el botón Close queda bloqueado mientras la encuesta esté
+  pendiente. D4 nota 1 se sostiene sin cambios.
+
+## Fin de la corrida 2
+
+- Hora de cierre: 12:15. Duración: 12:09 a 12:14.
+- No apareció ningún humano en ningún momento (0 de 3 intentos), así que
+  la regla de cierre por humano no se activó tampoco en esta corrida.
+
