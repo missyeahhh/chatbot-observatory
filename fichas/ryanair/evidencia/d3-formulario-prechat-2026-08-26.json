@@ -1,0 +1,9 @@
+{"capturado": "2026-08-26 12:11 CEST", "fuente": "volcado DOM del iframe webWidget (Zendesk) en help.ryanair.com",
+"header": "Chatea con nosotros",
+"fields": [
+  {"tag": "INPUT", "type": "text", "name": "name", "required": true, "label": "Nombre"},
+  {"tag": "INPUT", "type": "email", "name": "email", "required": true, "label": "Correo electrónico"},
+  {"tag": "TEXTAREA", "type": "textarea", "name": "message", "required": false, "label": "Mensaje (opcional)"}],
+"links_en_el_widget": [],
+"buttons": ["Iniciar chat"],
+"nota": "required=true leido del DOM. Ningun link a politica de privacidad dentro del widget."}

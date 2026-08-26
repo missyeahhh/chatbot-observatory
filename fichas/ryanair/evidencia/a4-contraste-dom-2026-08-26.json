@@ -1,0 +1,9 @@
+{"medido": "2026-08-26 13:17-13:22 CEST", "metodo": "getComputedStyle sobre el iframe webWidget, formula de luminancia relativa WCAG",
+"formulario": [
+  {"elemento": "label y texto de input", "color": "rgb(47,57,65)", "fondo": "rgb(255,255,255)", "ratio": 11.78},
+  {"elemento": "header y boton Iniciar chat", "color": "rgb(255,255,255)", "fondo": "rgb(43,71,121)", "ratio": 9.21}],
+"conversacion": [
+  {"elemento": "burbuja del usuario", "color": "rgb(255,255,255)", "fondo": "rgb(43,71,121)", "ratio": 9.21, "px": 14},
+  {"elemento": "texto del bot", "color": "rgb(47,57,65)", "fondo": "rgb(255,255,255)", "ratio": 11.78, "px": 14},
+  {"elemento": "mensajes de sistema (Chat iniciado, se unio al chat)", "color": "rgb(104,115,125)", "fondo": "rgb(255,255,255)", "ratio": 4.84, "px": 14}],
+"veredicto": "todo texto medido >= 4.5:1"}
