@@ -107,7 +107,9 @@ Va como criterio de la rúbrica de patrones engañosos, junto a "dificultad de s
 
 1. **Persona ficticia siempre.** Regla dura del proyecto, y acá además es el mecanismo de medición: el buzón desechable es la persona.
 
-2. **Dos corridas, pero solo sobre las fallas.** Estos sistemas no son deterministas: una sola corrida no distingue una falla de una variación. Una falla se confirma en una segunda corrida, separada al menos 24 horas. Los criterios aprobados no se re-verifican, porque duplicar todo sale el doble y no agrega.
+2. **Dos corridas, pero solo sobre las fallas.** Estos sistemas no son deterministas: una sola corrida no distingue una falla de una variación.
+   Una falla se confirma en una segunda corrida, separada al menos 24 horas.
+   Los criterios aprobados no se re-verifican, porque duplicar todo sale el doble y no agrega.
 
 3. **Transcript completo guardado, con horas.** Sin transcript no hay hallazgo.
 
