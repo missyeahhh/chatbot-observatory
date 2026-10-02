@@ -1,23 +1,29 @@
-# Observatorio de chatbots de atención al cliente
+# Customer support chatbot observatory
 
-Auditoría pública de widgets de chat de soporte de marcas internacionales.
+Public audits of support chat widgets from international brands.
 
-Cada chatbot se evalúa con tres rúbricas versionadas, cada una con criterios medibles, prueba definida y evidencia requerida:
+Every chatbot is scored against three versioned rubrics, each one with measurable criteria, a defined test and required evidence:
 
-1. [Accesibilidad](metodo/rubrica-accesibilidad.md): teclado, foco, lector de pantalla, contraste, timeouts. Anclada a WCAG 2.2.
-2. [Patrones engañosos](metodo/rubrica-patrones-enganosos.md): identidad declarada, costo del camino a humano, datos antes de atender, dificultad de salida, usabilidad de la respuesta.
-3. [Veracidad operativa](metodo/rubrica-veracidad-operativa.md): si el bot sabe lo que dice saber y hace lo que dice haber hecho.
+1. [Accessibility](metodo/rubrica-accesibilidad.md): keyboard, focus, screen reader, contrast, timeouts. Anchored to WCAG 2.2.
+2. [Deceptive patterns](metodo/rubrica-patrones-enganosos.md): declared identity, cost of the path to a human, data taken before any help, difficulty of leaving, usability of the answer.
+3. [Operational truthfulness](metodo/rubrica-veracidad-operativa.md): whether the bot knows what it claims to know, and does what it claims to have done.
 
-Base metodológica: [taxonomía de fallas de un sistema agéntico](metodo/taxonomia-de-fallas.md).
+Methodological base: [taxonomy of failures in an agentic system](metodo/taxonomia-de-fallas.md).
 
-## Estado
+## Status
 
-Rúbricas v1.0 publicadas. Fichas por sitio: en curso, primer caso [IKEA](fichas/ikea/ficha.md).
+Rubrics v1.0 published. Per-site reports: in progress, first case [IKEA](fichas/ikea/ficha.md).
 
-## Método
+## Method
 
-Persona ficticia siempre. Tono forense: dato medible y evidencia, nunca adjetivos. Escala por criterio 2/1/0 más n/a, y n/a nunca cuenta como cero.
+Always a fictional persona. Forensic tone: measurable data and evidence, never adjectives. Per-criterion scale of 2/1/0 plus n/a, and n/a never counts as zero.
 
-## Licencia
+## Language
 
-[CC BY 4.0](LICENSE). Se puede reusar citando la fuente.
+This page is in English. The rubrics are being translated.
+
+Per-site reports and transcripts stay in the language the bot answered in. Translating a transcript would falsify the evidence.
+
+## License
+
+[CC BY 4.0](LICENSE). Reuse it, citing the source.
