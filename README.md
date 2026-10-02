@@ -12,7 +12,7 @@ Base metodológica: [taxonomía de fallas de un sistema agéntico](metodo/taxono
 
 ## Estado
 
-Rúbricas v1.0 publicadas. Fichas por sitio: en curso.
+Rúbricas v1.0 publicadas. Fichas por sitio: en curso, primer caso [IKEA](fichas/ikea/ficha.md).
 
 ## Método
 
