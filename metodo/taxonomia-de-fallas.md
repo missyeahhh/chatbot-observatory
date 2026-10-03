@@ -1,129 +1,129 @@
-# Taxonomía de fallas de un sistema agéntico
+# Taxonomy of failures of an agentic system
 
-Base metodológica de las rúbricas del observatorio.
+Methodological base for the observatory's rubrics.
 
-Creado 22/8/2026. Sale de la extracción de un registro privado de operación, decidida por Sol el 22/8 (opción C: el log da el método, el observatorio le pone sujeto externo).
+Created 22/8/2026. It comes from extracting a private operations log, decided by Sol on 22/8 (option C: the log provides the method, the observatory provides an external subject).
 
-## De dónde sale
+## Where it comes from
 
-| dato | valor |
+| item | value |
 |---|---|
-| corpus | registro privado de operación |
-| ventana | 8/7/2026 al 22/8/2026, 6 semanas |
-| hallazgos registrados | 107, cada uno con evidencia y fecha |
-| usados acá | 53, los que no tocan datos personales |
-| método de registro | continuo, durante la operación real, no retrospectivo |
+| corpus | private operations log |
+| window | 8/7/2026 to 22/8/2026, 6 weeks |
+| findings logged | 107, each one with evidence and date |
+| used here | 53, the ones that do not touch personal data |
+| logging method | continuous, during real operation, not retrospective |
 
-No es un ejercicio de laboratorio. Es el registro de operación de un sistema de agentes en uso diario, con sus fallas anotadas en el momento en que ocurrieron.
+This is not a lab exercise. It is the operations log of an agent system in daily use, with its failures recorded at the moment they happened.
 
-**Nada del contenido personal del corpus se publica.** Lo que se publica es esta taxonomía y el modelo de control. Las 51 entradas restantes quedan privadas.
+**None of the personal content of the corpus is published.** What is published is this taxonomy and the control model. The remaining 51 entries stay private.
 
-## Por qué importa para auditar chatbots
+## Why it matters for auditing chatbots
 
-Las siete familias de abajo describen cómo un sistema conversacional afirma cosas falsas **sin mentir a propósito**: repite estado viejo, cree un handoff, confunde el registro que manda, o declara hecho algo que solo arrancó.
+The seven families below describe how a conversational system states false things **without lying on purpose**: it repeats stale state, trusts a handoff, confuses which record is authoritative, or declares done something that only started.
 
-Es exactamente el tipo de falla que un usuario de un chat de soporte no puede detectar y que ninguna rúbrica de accesibilidad captura.
+This is exactly the kind of failure that a support chat user cannot detect and that no accessibility rubric captures.
 
 ---
 
-## Familia 1: afirmar estado sin verificarlo
+## Family 1: stating state without verifying it
 
-La más frecuente del corpus. Nueve instancias. Lo que cambia entre ellas no es el error, es **de dónde vino la premisa falsa**, y ese es el eje útil para una rúbrica.
+The most frequent in the corpus. Nine instances. What changes between them is not the error, it is **where the false premise came from**, and that is the useful axis for a rubric.
 
-| origen de la premisa falsa | caso | fecha |
+| origin of the false premise | case | date |
 |---|---|---|
-| inferencia por ubicación o categoría de un archivo | dar por faltante un documento que el panel oficial mostraba en verde | 4/8 |
-| documento de handoff que afirma estado | "se creó el CLAUDE.md raíz", no existía | 11/8 |
-| copia de un hecho cuyo dueño es otra nota | fecha de visa copiada, la copia envejeció, el original estaba bien | 12/8 |
-| modelo interno sobre cómo se comporta una herramienta | afirmar qué iba a hacer `git filter-repo` antes de correrlo | 15/8 |
-| premisa del propio usuario | premisa del usuario sobre el estado de un documento, contradicha por el registro | 12/8 |
-| el registro equivocado, y era el que el sistema lee por diseño | se filtro contra el archivo de criterios cuando las decisiones vivian en otra nota | 14/8 |
-| ventana de búsqueda que no podía contener el objeto | afirmar que un turno no existía habiendo mirado un solo día | 12/8 |
+| inference from a file's location or category | treating as missing a document that the official dashboard showed in green | 4/8 |
+| handoff document that states state | "the root CLAUDE.md was created", it did not exist | 11/8 |
+| copy of a fact owned by another note | visa date copied, the copy aged, the original was correct | 12/8 |
+| internal model of how a tool behaves | stating what `git filter-repo` would do before running it | 15/8 |
+| the user's own premise | the user's premise about a document's status, contradicted by the record | 12/8 |
+| the wrong record, and it was the one the system reads by design | filtering against the criteria file when the decisions lived in another note | 14/8 |
+| search window that could not contain the object | stating that an appointment did not exist after looking at a single day | 12/8 |
 
-**Regla que sale de acá:** una afirmación de estado va con la fuente pegada, o va con "no lo verifiqué". El modelo interno de una herramienta se siente como conocimiento y por eso no dispara la verificación: es el origen más peligroso de los siete.
+**Rule that comes out of this:** a statement of state goes with its source attached, or it goes with "I did not verify it". A tool's internal model feels like knowledge and therefore does not trigger verification: it is the most dangerous of the seven origins.
 
-## Familia 2: artefactos que envejecen sin dueño
+## Family 2: artifacts that age without an owner
 
-Un artefacto correcto el día que se escribió, leído como vigente semanas después.
+An artifact that was correct the day it was written, read as current weeks later.
 
-- **Nota desactualizada leída por un proceso automático.** Tres instancias en tres áreas distintas (20/7, 26/7, 10/8). El proceso no falla, la entrada sí.
-- **Prompt de tarea programada congelado.** El prompt se inyecta entero al dispararse: si trae estado, ese estado se pudre sin que nadie lo mire, porque es el que da la orden (11/8, 16/8).
-- **Archivo de reglas leído al abrir y editado en paralelo.** Dos instancias (13/8, 15/8). La sesión trabaja sobre una foto y no tiene forma de enterarse sola de que venció.
-- **Zombie:** tarea viva cuya premisa ya cambió. Imprimir con una impresora que ya no está en la casa (10/8). Ningún radar detecta este tipo de muerte.
+- **Outdated note read by an automated process.** Three instances in three different areas (20/7, 26/7, 10/8). The process does not fail, the input does.
+- **Frozen scheduled-task prompt.** The prompt is injected whole when it fires: if it carries state, that state rots without anyone looking at it, because it is the one giving the order (11/8, 16/8).
+- **Rules file read at startup and edited in parallel.** Two instances (13/8, 15/8). The session works on a snapshot and has no way of finding out on its own that it expired.
+- **Zombie:** a live task whose premise has already changed. Printing on a printer that is no longer in the house (10/8). No radar detects this kind of death.
 
-**Regla:** en la sección de contexto de cualquier prompt o handoff van punteros a dónde vive el estado, nunca el estado.
+**Rule:** the context section of any prompt or handoff carries pointers to where the state lives, never the state itself.
 
-## Familia 3: el workaround que apaga el detector
+## Family 3: the workaround that switches off the detector
 
-Un lock de git apareció cuatro veces. Las cuatro se "arregló" el síntoma. El arreglo consistía en renombrar el archivo, y el limpiador automático buscaba justo por ese nombre.
+A git lock appeared four times. All four times the symptom was "fixed". The fix consisted of renaming the file, and the automated cleaner searched for exactly that name.
 
-O sea: cada arreglo escondía el problema del único mecanismo que lo iba a resolver. Al detectarlo había 16 acumulados (16/8).
+In other words: each fix hid the problem from the only mechanism that was going to solve it. By the time it was detected, 16 had piled up (16/8).
 
-**Regla:** antes de aplicar un workaround, preguntar qué mecanismo existente deja de ver el problema. Si algo falla dos veces igual, la respuesta no es repetir el parche, es buscar por qué el entorno lo produce.
+**Rule:** before applying a workaround, ask which existing mechanism stops seeing the problem. If something fails the same way twice, the answer is not to repeat the patch, it is to find out why the environment produces it.
 
-## Familia 4: verificar el objetivo no es verificar el sistema
+## Family 4: verifying the goal is not verifying the system
 
-Una limpieza de historial de git pasó su propio chequeo con holgura, y en la misma corrida rompió la capacidad de mergear con upstream. El daño era invisible desde el chequeo, porque no tenía nada que ver con el objetivo (15/8).
+A git history cleanup passed its own check comfortably, and in the same run it broke the ability to merge with upstream. The damage was invisible from the check, because it had nothing to do with the goal (15/8).
 
-**Regla:** en toda operación destructiva, además de medir el objetivo, elegir una función del sistema que **no** era el objetivo y medirla antes y después.
+**Rule:** in every destructive operation, besides measuring the goal, pick a system function that was **not** the goal and measure it before and after.
 
-## Familia 5: correcto no es usable
+## Family 5: correct is not usable
 
-Dos casos, ninguno de exactitud:
+Two cases, neither about accuracy:
 
-- Un filtrado de 31 items entregado como lista de IDs sueltos. Correcto y sin usar. Las dos objeciones fueron "no me sirve" y "no tengo garantías de que revisaras todo": formato y verificabilidad, ninguna de exactitud (14/8).
-- Un entregable regenerado cuatro veces con el mismo nombre de archivo. El visor servía la copia cacheada, así que la revisión fue siempre sobre la versión vieja, y era indetectable desde el lado del productor (15/8).
+- A filtering of 31 items delivered as a list of bare IDs. Correct and unused. The two objections were "this doesn't work for me" and "I have no guarantee you reviewed everything": format and verifiability, neither about accuracy (14/8).
+- A deliverable regenerated four times under the same file name. The viewer served the cached copy, so the review was always on the old version, and this was undetectable from the producer's side (15/8).
 
-**Regla:** quien produce evalúa si algo es correcto, no tiene señal propia de si es usable. Son dos propiedades distintas y la segunda se pregunta antes de producir.
+**Rule:** whoever produces something evaluates whether it is correct, but has no signal of their own about whether it is usable. They are two different properties, and the second one is asked about before producing.
 
-## Familia 6: silencio de ejecución
+## Family 6: execution silence
 
-Dos corridas de una misma tarea programada no entregaron nada y nadie se enteró: una se interrumpió a los dos comandos, la otra derivó a otro tema. Desde afuera la tarea figuraba corrida (16/8).
+Two runs of the same scheduled task delivered nothing and nobody noticed: one was interrupted after two commands, the other drifted to another topic. From the outside the task showed as run (16/8).
 
-**Regla:** el registro de "última corrida" prueba que arrancó, no que entregó. Una tarea puede fallar en silencio durante semanas.
+**Rule:** the "last run" record proves that it started, not that it delivered. A task can fail silently for weeks.
 
-## Familia 7: el costo se paga al pedir, no al usar
+## Family 7: the cost is paid when requesting, not when using
 
-- Se pidieron 101 sesiones para usar 19. Las otras 82 se descartaron por título, pero el listado ya estaba pago (16/8).
-- Se reconstruyo a mano, leyendo capturas de pantalla con visión, un conjunto de datos que ya estaba completo en un archivo del propio repo. Nunca se listó la carpeta (14/8).
+- 101 sessions were requested to use 19. The other 82 were discarded by title, but the listing had already been paid for (16/8).
+- A dataset was rebuilt by hand, reading screenshots with vision, when it was already complete in a file in the repo itself. The folder was never listed (14/8).
 
-**Regla:** descartar barato no es lo mismo que no traer. Y listar una carpeta cuesta cero.
+**Rule:** discarding cheaply is not the same as not fetching. And listing a folder costs nothing.
 
 ---
 
-## Modelo de control
+## Control model
 
-La distinción que hace funcionar todo lo anterior, y el hallazgo más transferible del corpus.
+The distinction that makes everything above work, and the most transferable finding of the corpus.
 
-| tipo | qué es | dónde funciona | evidencia |
+| type | what it is | where it works | evidence |
 |---|---|---|---|
-| preventivo | regla escrita | decisiones: preguntar antes de X, verificar antes de Y | funciona: las reglas de decisión del corpus se cumplen |
-| detectivo | chequeo del output antes de mandarlo | hábitos de generación | funciona a medias, depende de que alguien se acuerde |
-| automático | hook, script, validador | todo lo mecanizable | única categoría sin reincidencia registrada |
+| preventive | written rule | decisions: ask before X, verify before Y | works: the corpus decision rules are followed |
+| detective | check of the output before sending it | generation habits | works halfway, depends on someone remembering |
+| automatic | hook, script, validator | everything that can be mechanized | the only category with no recorded recurrence |
 
-Evidencia dura de los extremos:
+Hard evidence from the extremes:
 
-- La regla de formato más repetida del sistema está escrita en cuatro archivos y es la que más se incumple. Se violó incluso dentro de la respuesta que listaba las reglas (16/8).
-- El único problema de formato que dejó de aparecer es el que se movió a código, cambiando el script que lo generaba (15/8).
+- The most repeated formatting rule in the system is written in four files and is the one most often broken. It was violated even inside the response that listed the rules (16/8).
+- The only formatting problem that stopped appearing is the one that was moved into code, by changing the script that generated it (15/8).
 
-**Conclusión operativa:** una regla de output escrita es un placebo. Si se puede mecanizar, se mecaniza; si no, se convierte en chequeo explícito, no en recordatorio.
+**Operational conclusion:** a written output rule is a placebo. If it can be mechanized, it is mechanized; if not, it becomes an explicit check, not a reminder.
 
 ---
 
-## Cómo baja a la rúbrica del observatorio
+## How it maps to the observatory's rubric
 
-Candidatos a criterios, derivados uno a uno de las familias de arriba. Se versionan y se cierran al armar la rúbrica v1.
+Candidate criteria, each derived from one of the families above. They are versioned and closed when building rubric v1.
 
-| familia | qué se le mide a un chatbot de soporte |
+| family | what is measured in a support chatbot |
 |---|---|
-| 1 | ¿Afirma estado que no puede saber? Confirma envíos, tickets o plazos sin fuente. |
-| 1 | ¿Distingue lo que verificó de lo que infiere del contexto de la conversación? |
-| 2 | ¿Responde con información desactualizada sin fecharla ni marcar su antigüedad? |
-| 5 | ¿La respuesta es correcta pero inutilizable? Muro de texto, sin próximo paso, sin cómo verificarlo. |
-| 6 | ¿Declara una acción hecha cuando solo la inició? "Ya lo derivé a un agente" y no hay agente. |
-| 3 | ¿El camino a un humano existe de verdad, o hay un atajo que aparenta resolver y cierra el reclamo? |
+| 1 | Does it state state it cannot know? It confirms shipments, tickets or deadlines without a source. |
+| 1 | Does it distinguish what it verified from what it infers from the conversation context? |
+| 2 | Does it answer with outdated information without dating it or flagging its age? |
+| 5 | Is the answer correct but unusable? Wall of text, no next step, no way to verify it. |
+| 6 | Does it declare an action done when it only started it? "I've already passed you to an agent" and there is no agent. |
+| 3 | Does the path to a human really exist, or is there a shortcut that looks like it resolves and closes the complaint? |
 
-Las dos rúbricas ya decididas (accesibilidad y patrones engañosos) no cubren nada de esto. Esta es una tercera dimensión: **veracidad operativa**, o si el bot sabe lo que dice saber.
+The two rubrics already decided (accessibility and deceptive patterns) cover none of this. This is a third dimension: **operational truthfulness**, or whether the bot knows what it claims to know.
 
 ---
-*Corpus privado. Este documento es la única salida publicable de él.*
+*Private corpus. This document is its only publishable output.*
