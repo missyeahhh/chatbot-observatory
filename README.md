@@ -20,7 +20,7 @@ Always a fictional persona. Forensic tone: measurable data and evidence, never a
 
 ## Language
 
-This page is in English. The rubrics are being translated.
+This page and the three rubrics are in English.
 
 Per-site reports and transcripts stay in the language the bot answered in. Translating a transcript would falsify the evidence.
 
