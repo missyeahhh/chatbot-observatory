@@ -11,12 +11,12 @@ Created 22/8/2026. It comes from extracting a private operations log, decided by
 | corpus | private operations log |
 | window | 8/7/2026 to 22/8/2026, 6 weeks |
 | findings logged | 107, each one with evidence and date |
-| used here | 53, the ones that do not touch personal data |
+| with no personal mentions | 53, by keyword filter over the 104 entries logged when the extraction ran |
 | logging method | continuous, during real operation, not retrospective |
 
 This is not a lab exercise. It is the operations log of an agent system in daily use, with its failures recorded at the moment they happened.
 
-**None of the personal content of the corpus is published.** What is published is this taxonomy and the control model. The remaining 51 entries stay private.
+**None of the personal content of the corpus is published.** What is published is this taxonomy and the control model. The remaining 54 entries stay private: 51 with personal mentions, plus 3 logged after the extraction.
 
 ## Why it matters for auditing chatbots
 
@@ -28,7 +28,7 @@ This is exactly the kind of failure that a support chat user cannot detect and t
 
 ## Family 1: stating state without verifying it
 
-The most frequent in the corpus. Nine instances. What changes between them is not the error, it is **where the false premise came from**, and that is the useful axis for a rubric.
+The most frequent in the corpus: 19 instances out of 107. What changes between them is not the error, it is **where the false premise came from**, and that is the useful axis for a rubric.
 
 | origin of the false premise | case | date |
 |---|---|---|
