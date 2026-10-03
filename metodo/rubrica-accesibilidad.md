@@ -1,128 +1,128 @@
-# Rúbrica 1: accesibilidad
+# Rubric 1: accessibility
 
-**v1.0, 23/8/2026.** Criterios propuestos por Claude, vetados y aprobados por Sol el mismo día.
+**v1.0, 23/8/2026.** Criteria drafted by Claude, reviewed and approved by Sol the same day.
 
-Mide una sola cosa: **si una persona que no usa el mouse, o no ve la pantalla, puede abrir el chat, hablar y salir.**
+It measures one thing: **whether a person who does not use a mouse, or does not see the screen, can open the chat, talk, and leave.**
 
-Cada criterio se ancla a un criterio de éxito de WCAG 2.2, para que todo hallazgo cite norma y no opinión.
+Every criterion is anchored to a WCAG 2.2 success criterion, so that each finding cites a standard and not an opinion.
 
-## Alcance, y por qué es un recorte
+## Scope, and why it is a cut
 
-Entra lo que se puede probar desde una Mac con Safari, sin cuenta en el sitio y sin hardware adicional.
+In scope: whatever can be tested from a Mac with Safari, with no account on the site and no extra hardware.
 
-Fuera de alcance en v1, por costo, no por falta de interés:
+Out of scope in v1, for cost, not for lack of interest:
 
-- Lectores de pantalla en Windows (NVDA, JAWS). Son los más usados por personas ciegas, pero requieren una máquina Windows. Decidido por Sol el 23/8: v1 usa solo VoiceOver en Safari, y lo declara como límite en cada ficha.
-- Navegación por voz y switch access.
-- Modo oscuro y preferencias de movimiento reducido.
+- Screen readers on Windows (NVDA, JAWS). They are the ones most used by blind people, but they need a Windows machine. Decided by Sol on 23/8: v1 uses VoiceOver on Safari only, and declares that limit in every report.
+- Voice navigation and switch access.
+- Dark mode and reduced motion preferences.
 
-## Escala
+## Scale
 
-Por criterio: **2 cumple, 1 parcial, 0 falla, n/a no se pudo probar.**
+Per criterion: **2 passes, 1 partial, 0 fails, n/a could not be tested.**
 
-**Regla dura: `n/a` nunca se cuenta como 0.** El puntaje se expresa como "X sobre Y aplicables", nunca sobre un máximo teórico. Misma regla que la rúbrica 3.
+**Hard rule: `n/a` is never counted as 0.** The score is written as "X out of Y applicable", never out of a theoretical maximum. Same rule as rubric 3.
 
-## Los cinco criterios
+## The five criteria
 
-### A1. Llegar y abrir por teclado
+### A1. Reach it and open it with the keyboard
 
-**Qué mide:** si el chat existe para quien navega con Tab.
+**What it measures:** whether the chat exists at all for someone navigating with Tab.
 
-**Prueba:** desde la barra de direcciones, Tab hasta el botón que abre el chat. Enter o Space. Ver dónde queda el foco.
+**Test:** from the address bar, Tab to the button that opens the chat. Enter or Space. See where focus lands.
 
-| nota | condición |
+| score | condition |
 |---|---|
-| 2 | el launcher recibe foco, se abre con Enter o Space, y el foco entra al widget (campo de texto o primer control) |
-| 1 | se abre, pero el foco queda afuera y hay que tabular hasta encontrarlo |
-| 0 | el launcher no recibe foco, o recibe foco y no responde al teclado |
+| 2 | the launcher takes focus, opens with Enter or Space, and focus moves into the widget (text field or first control) |
+| 1 | it opens, but focus stays outside and you have to tab around to find it |
+| 0 | the launcher never takes focus, or takes focus and does not respond to the keyboard |
 
-**Evidencia:** captura con el anillo de foco visible sobre el launcher, y cantidad de Tabs desde la barra de direcciones.
+**Evidence:** screenshot with the focus ring visible on the launcher, and the number of Tabs from the address bar.
 
 **WCAG:** 2.1.1 Keyboard, 2.4.3 Focus Order.
 
-### A2. Salir sin quedar atrapada
+### A2. Leave without getting trapped
 
-**Qué mide:** si el widget devuelve el control.
+**What it measures:** whether the widget gives control back.
 
-**Prueba:** con el chat abierto, Esc. Después, Tab 20 veces seguidas. Después cerrar con el botón y ver dónde queda el foco.
+**Test:** with the chat open, press Esc. Then Tab 20 times in a row. Then close with the button and see where focus lands.
 
-| nota | condición |
+| score | condition |
 |---|---|
-| 2 | Esc cierra, Tab sale del widget hacia la página, y al cerrar el foco vuelve al launcher |
-| 1 | se puede salir, pero solo por una de las vías, o el foco se pierde al cerrar (vuelve al inicio de la página) |
-| 0 | el foco queda atrapado dentro del widget sin forma de salir por teclado |
+| 2 | Esc closes it, Tab leaves the widget back into the page, and on close focus returns to the launcher |
+| 1 | you can get out, but only one of those ways works, or focus is lost on close (back to the top of the page) |
+| 0 | focus is trapped inside the widget with no keyboard way out |
 
-**Evidencia:** transcript de teclas (Esc, Tab x N) y captura de dónde quedó el foco.
+**Evidence:** key transcript (Esc, Tab x N) and a screenshot of where focus ended up.
 
 **WCAG:** 2.1.2 No Keyboard Trap.
 
 ### A3. Screen reader
 
-**Qué mide:** si el chat se puede usar sin ver la pantalla.
+**What it measures:** whether the chat can be used without seeing the screen.
 
-**Prueba:** VoiceOver en Safari (Cmd + F5). Abrir el chat, mandar un mensaje, esperar la respuesta, recorrer los controles con VO + flecha derecha.
+**Test:** VoiceOver on Safari (Cmd + F5). Open the chat, send a message, wait for the answer, walk the controls with VO + right arrow.
 
-| nota | condición |
+| score | condition |
 |---|---|
-| 2 | el widget tiene nombre, la respuesta del bot se anuncia sola al llegar, y cada botón dice qué hace |
-| 1 | se puede operar, pero falta una de las tres: sin nombre, o la respuesta no se anuncia y hay que ir a buscarla, o hay botones "button" sin etiqueta |
-| 0 | VoiceOver no entra al widget, o lee el contenido como un bloque sin estructura |
+| 2 | the widget has a name, the bot's answer is announced on its own when it arrives, and every button says what it does |
+| 1 | it can be operated, but one of the three is missing: no name, or the answer is not announced and you have to go looking for it, or there are unlabeled "button" controls |
+| 0 | VoiceOver does not enter the widget, or reads the content as one block with no structure |
 
-**Evidencia:** grabación de audio o transcript de lo que VoiceOver lee, con el momento exacto de la respuesta del bot.
+**Evidence:** audio recording or transcript of what VoiceOver reads, with the exact moment the bot answers.
 
 **WCAG:** 4.1.2 Name, Role, Value. 4.1.3 Status Messages.
 
-**Límite declarado:** solo VoiceOver en Safari. Un resultado de 2 acá no garantiza NVDA ni JAWS.
+**Declared limit:** VoiceOver on Safari only. A 2 here does not guarantee NVDA or JAWS.
 
-### A4. Contraste y zoom
+### A4. Contrast and zoom
 
-**Qué mide:** si el texto se lee con baja visión.
+**What it measures:** whether the text is readable with low vision.
 
-**Prueba:** medir el contraste del texto del bot y del texto del usuario contra su fondo con una herramienta (el inspector de Safari lo muestra en Elements > Styles, o cualquier contrast checker). Después, zoom del navegador al 200%.
+**Test:** measure the contrast of the bot's text and the user's text against their background with a tool (Safari's inspector shows it under Elements > Styles, or any contrast checker). Then zoom the browser to 200%.
 
-| nota | condición |
+| score | condition |
 |---|---|
-| 2 | todo texto del chat a 4.5:1 o más, y al 200% no se corta ni se superpone nada |
-| 1 | contraste cumple pero el 200% rompe el layout, o al revés |
-| 0 | texto por debajo de 4.5:1 en las burbujas del bot o del usuario |
+| 2 | every chat text at 4.5:1 or more, and at 200% nothing is clipped or overlapping |
+| 1 | contrast passes but 200% breaks the layout, or the other way around |
+| 0 | text below 4.5:1 in the bot's or the user's bubbles |
 
-**Evidencia:** los valores medidos por cada tipo de texto, y captura al 200%.
+**Evidence:** the measured values per type of text, and a screenshot at 200%.
 
 **WCAG:** 1.4.3 Contrast (Minimum), 1.4.4 Resize Text.
 
 ### A5. Timeouts
 
-**Qué mide:** si el tiempo juega en contra de quien es lento.
+**What it measures:** whether time works against someone who is slow.
 
-**Prueba:** escribir medio mensaje sin mandar. Dejar la sesión quieta 10 minutos. Volver.
+**Test:** type half a message without sending it. Leave the session idle for 10 minutes. Come back.
 
-| nota | condición |
+| score | condition |
 |---|---|
-| 2 | no vence, o avisa antes de vencer y deja extender, y lo escrito sigue ahí |
-| 1 | vence sin aviso pero lo escrito y el historial siguen |
-| 0 | vence sin aviso y se pierde lo escrito o el historial |
+| 2 | it does not expire, or it warns before expiring and lets you extend, and what was typed is still there |
+| 1 | it expires with no warning but what was typed and the history survive |
+| 0 | it expires with no warning and what was typed or the history is lost |
 
-**Evidencia:** hora de inicio y de vuelta, captura del estado al volver.
+**Evidence:** start time and return time, screenshot of the state on return.
 
 **WCAG:** 2.2.1 Timing Adjustable.
 
-## Lo que NO entra en esta rúbrica
+## What this rubric does NOT cover
 
-- Si el bot entiende lo que se le dice. Eso es calidad de respuesta, no accesibilidad.
-- Si la página que rodea al chat es accesible. Se audita el widget, no el sitio.
+- Whether the bot understands what it is told. That is answer quality, not accessibility.
+- Whether the page around the chat is accessible. The widget is audited, not the site.
 
-## Protocolo de corrida
+## Run protocol
 
-1. **Safari limpio**, sin extensiones, ventana a 1280 px de ancho.
+1. **Clean Safari**, no extensions, window at 1280 px wide.
 
-2. **Orden fijo:** A1, A2, A4, A5 en una sesión. A3 en otra sesión aparte, porque VoiceOver cambia cómo se comporta el foco y contaminaría A1 y A2.
+2. **Fixed order:** A1, A2, A4, A5 in one session. A3 in a separate session, because VoiceOver changes how focus behaves and would contaminate A1 and A2.
 
-3. **Una sola corrida alcanza.** A diferencia de la rúbrica 3, acá el comportamiento es determinista: el widget es el mismo código cada vez. Una falla se documenta con captura y no necesita segunda corrida.
+3. **One run is enough.** Unlike rubric 3, the behavior here is deterministic: the widget is the same code every time. A failure is documented with a screenshot and needs no second run.
 
-4. **Captura de cada 0.** Sin captura no hay hallazgo.
+4. **A screenshot for every 0.** No screenshot, no finding.
 
-## Costo
+## Cost
 
-Entre 25 y 35 minutos por sitio, de los cuales 10 son la espera de A5, que corre en paralelo con otra cosa.
+Between 25 and 35 minutes per site, of which 10 are the wait in A5, which runs in parallel with something else.
 
-Para 6 a 8 sitios: **entre 3 y 4 horas.** Coincide con el bloque "Rúbricas 1 y 2" de `plan.md` solo si la rúbrica 2 se corre en la misma sesión por sitio, que es lo previsto.
+For 6 to 8 sites: **between 3 and 4 hours.** It matches the "Rubrics 1 and 2" block in `plan.md` only if rubric 2 runs in the same session per site, which is the plan.
