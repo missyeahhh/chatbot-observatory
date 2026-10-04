@@ -2,7 +2,7 @@
 
 Methodological base for the observatory's rubrics.
 
-Created 22/8/2026. It comes from extracting a private operations log, decided by Sol on 22/8 (option C: the log provides the method, the observatory provides an external subject).
+Created 22/8/2026. It comes from extracting a private operations log, decided by Sol on 22/8: the log provides the method, the observatory provides an external subject.
 
 ## Where it comes from
 
@@ -112,7 +112,7 @@ Hard evidence from the extremes:
 
 ## How it maps to the observatory's rubric
 
-Candidate criteria, each derived from one of the families above. They are versioned and closed when building rubric v1.
+These were the candidate criteria, each derived from one family. Rubric v1.0 closed them: families 1, 2, 3 and 6 became [rubric 3, operational truthfulness](rubrica-veracidad-operativa.md), and family 5 went to [rubric 2, deceptive patterns](rubrica-patrones-enganosos.md).
 
 | family | what is measured in a support chatbot |
 |---|---|
@@ -123,7 +123,7 @@ Candidate criteria, each derived from one of the families above. They are versio
 | 6 | Does it declare an action done when it only started it? "I've already passed you to an agent" and there is no agent. |
 | 3 | Does the path to a human really exist, or is there a shortcut that looks like it resolves and closes the complaint? |
 
-The two rubrics already decided (accessibility and deceptive patterns) cover none of this. This is a third dimension: **operational truthfulness**, or whether the bot knows what it claims to know.
+The first two rubrics, accessibility and deceptive patterns, cover none of this. That is why there is a third: **operational truthfulness**, whether the bot knows what it claims to know.
 
 ---
 *Private corpus. This document is its only publishable output.*

@@ -15,7 +15,7 @@ Out of scope in v1, because they cannot be measured, not for lack of interest:
 - Ticket numbers, account statements, histories. They need an account.
 - Delivery dates, charges, refunds. They need a real order or money.
 
-The site selection criterion already in `plan.md` since 16/8 ("chatbot reachable without creating an account") makes this cut cost nothing: the sites ruled out by login were already out.
+The observatory's site selection criterion, in force since 16/8 ("chatbot reachable without creating an account") makes this cut cost nothing: the sites ruled out by login were already out.
 
 ## Scale
 

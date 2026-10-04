@@ -127,10 +127,10 @@ Dos, y ninguno cuenta como 0:
 
 ## Pendiente de esta ficha
 
-1. **A3 con VoiceOver**, para cerrar la rúbrica 1 en 5 de 5. Guion único: [metodo/guion-a11y-ikea-ryanair-2026-08-27.md](../../metodo/guion-a11y-ikea-ryanair-2026-08-27.md).
+1. **A3 con VoiceOver**, para cerrar la rúbrica 1 en 5 de 5. Se corre con el guion interno de accesibilidad, que no se publica.
 2. **Re-verificación a 24 horas** de los criterios con causa dudosa, como se hizo con IKEA. Candidatos: D1 (si la pregunta directa se responde en otra corrida) y D2 (si los 5 escalones son estables o variabilidad del flujo).
 3. **Re-chequeo del buzón** por la encuesta prometida a las 12:37, para cerrar el control de V2.
-4. **Paso 6 del piloto:** comparar los huecos de rúbrica de Ryanair (D1 declarar y evadir, V2 ni afirma ni niega, idioma del flujo de escalado) contra los tres que dejó IKEA.
+4. **Comparación con IKEA:** comparar los huecos de rúbrica de Ryanair (D1 declarar y evadir, V2 ni afirma ni niega, idioma del flujo de escalado) contra los tres que dejó IKEA.
 
 ---
 *Corrida 1 de 1, completa en rúbricas 2 y 3 (12:07 a 12:47 CEST del 26/8/2026) más la corrida manual de rúbrica 1 de Sol (13:00 a 13:20). Sin re-verificación: a diferencia de IKEA, estas notas son de una sola pasada. Un 0 (D3) y dos n/a (A3 sin probar, V2 hueco de escala). Capturas de imagen descartadas por el límite declarado arriba.*

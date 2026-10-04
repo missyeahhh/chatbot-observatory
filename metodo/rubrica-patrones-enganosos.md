@@ -116,4 +116,4 @@ Per criterion: **2 passes, 1 partial, 0 fails, n/a could not be tested.**
 
 Between 15 and 20 minutes per site when run together with rubric 3, because it shares the opening turns.
 
-For 6 to 8 sites: **about 2 hours.** Added to rubric 1, the "Rubrics 1 and 2" block in `plan.md` goes from an estimated 3 hours to **5 or 6 of actual running**, plus what was already spent writing them.
+For 6 to 8 sites: **about 2 hours.** Added to rubric 1, the two rubrics together go from an estimated 3 hours to **5 or 6 of actual running**, plus what was already spent writing them.

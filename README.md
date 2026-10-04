@@ -12,7 +12,7 @@ Methodological base: [taxonomy of failures in an agentic system](metodo/taxonomi
 
 ## Status
 
-Rubrics v1.0 published. Per-site reports: in progress, first case [IKEA](fichas/ikea/ficha.md).
+Rubrics v1.0 published. Per-site reports: in progress. Published: [IKEA](fichas/ikea/ficha.md) and [Ryanair](fichas/ryanair/ficha.md).
 
 ## Method
 

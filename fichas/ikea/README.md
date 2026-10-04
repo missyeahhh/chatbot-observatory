@@ -10,8 +10,8 @@ Ficha del observatorio para el chatbot de soporte de IKEA España ("Billie", pro
 
 ## Mapa de la carpeta
 
-- [ficha.md](ficha.md) : el entregable público (scoreboard del sitio con las tres rúbricas). Equivale a `web/` en Nox.
-- `evidencia/` : el trabajo y la prueba. Equivale a `qa/` en Nox.
+- [ficha.md](ficha.md) : el entregable público (scoreboard del sitio con las tres rúbricas).
+- `evidencia/` : el trabajo y la prueba.
   - `transcript-2026-08-26.md` : transcript de las corridas.
   - `v2-buzon-mailtm-2026-08-26.json` : evidencia de la persona ficticia (buzón desechable).
 

@@ -125,4 +125,4 @@ Per criterion: **2 passes, 1 partial, 0 fails, n/a could not be tested.**
 
 Between 25 and 35 minutes per site, of which 10 are the wait in A5, which runs in parallel with something else.
 
-For 6 to 8 sites: **between 3 and 4 hours.** It matches the "Rubrics 1 and 2" block in `plan.md` only if rubric 2 runs in the same session per site, which is the plan.
+For 6 to 8 sites: **between 3 and 4 hours.** That holds only if rubric 2 runs in the same session per site, which is how the runs are planned.
