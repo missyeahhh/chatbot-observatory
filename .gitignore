@@ -11,3 +11,7 @@
 
 # Guion interno de accesibilidad: vive en disco, otros proyectos lo enlazan, no se publica.
 metodo/guion-*
+
+# Copias de lectura para Sol, generadas por _shared/scripts/md-a-html.py desde un .md.
+# Se regeneran: no van a git ni al respaldo (decisión 30A de Sol, 6/10/2026).
+*.lectura.html
