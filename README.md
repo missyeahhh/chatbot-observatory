@@ -1,3 +1,7 @@
+[![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-4a5568)](LICENSE)
+[![Rubrics v1.0](https://img.shields.io/badge/rubrics-v1.0-4a5568)](metodo/)
+[![Sites audited: 2](https://img.shields.io/badge/sites%20audited-2-4a5568)](#results)
+
 # Customer support chatbot observatory
 
 Public audits of support chat widgets from international brands.
@@ -13,6 +17,15 @@ Methodological base: [taxonomy of failures in an agentic system](metodo/taxonomi
 ## Status
 
 Rubrics v1.0 published. Per-site reports: in progress. Published: [IKEA](fichas/ikea/ficha.md) and [Ryanair](fichas/ryanair/ficha.md).
+
+## Results
+
+| site | accessibility | deceptive patterns | operational truthfulness | audited | report |
+|---|---|---|---|---|---|
+| IKEA Spain | n/a (not run yet) | 8 out of 10 applicable | 10 out of 10 applicable | 2026-08-26 | [report](fichas/ikea/ficha.md) |
+| Ryanair | 5 out of 8 applicable | 5 out of 10 applicable | 7 out of 8 applicable | 2026-08-26 | [report](fichas/ryanair/ficha.md) |
+
+Higher is better. Each criterion scores 2, 1 or 0, so the maximum is twice the number of applicable criteria.
 
 ## Method
 
