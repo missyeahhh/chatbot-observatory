@@ -3,7 +3,7 @@
 Fecha: 2026-08-26. Horas en CEST.
 Sitio: https://www.ryanair.com/es/es (centro de ayuda).
 Navegador: navegador integrado de Claude Code, viewport 1280x720.
-Persona ficticia: Lucía Ferrero, buzón desechable luciaferrerob86922@emalupe.com (mail.tm, password 34ddacd7f65d0052).
+Persona ficticia: Lucía Ferrero, buzón desechable luciaferrerob86922@emalupe.com (mail.tm; la contraseña no se publica).
 Rúbricas corridas: 2 (patrones engañosos) y 3 (veracidad operativa). Rúbrica 1 con Sol en esta misma sesión, pasada aparte.
 Corrida en horario de agentes (inicio 12:08), a diferencia de IKEA corrida 1: la derivación efectiva (D2/V1) es medible.
 
