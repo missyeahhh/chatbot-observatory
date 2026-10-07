@@ -8,6 +8,8 @@
 !metodo/**
 !fichas/
 !fichas/**
+!images/
+!images/**
 
 # Guion interno de accesibilidad: vive en disco, otros proyectos lo enlazan, no se publica.
 metodo/guion-*

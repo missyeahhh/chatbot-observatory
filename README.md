@@ -1,42 +1,51 @@
-[![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-4a5568)](LICENSE)
-[![Rubrics v1.0](https://img.shields.io/badge/rubrics-v1.0-4a5568)](metodo/)
-[![Sites audited: 2](https://img.shields.io/badge/sites%20audited-2-4a5568)](#results)
+<p align="center"><img src="images/header.png" alt="Support Chatbot Observatory, by sol. Audited in public. Evidence, not adjectives."></p>
 
-# Customer support chatbot observatory
+<p align="center">
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY%204.0-4a5568" alt="License: CC BY 4.0"></a>
+<a href="metodo/"><img src="https://img.shields.io/badge/rubrics-v1.0-4a5568" alt="Rubrics v1.0"></a>
+<a href="#results"><img src="https://img.shields.io/badge/sites%20audited-2-4a5568" alt="Sites audited: 2"></a>
+</p>
 
-Public audits of support chat widgets from international brands.
+Public audits of the support chat widgets of international brands.
 
-Every chatbot is scored against three versioned rubrics, each one with measurable criteria, a defined test and required evidence:
+Every chatbot is scored against three versioned rubrics. Each criterion has a measurable definition, a defined test and required evidence.
 
-1. [Accessibility](metodo/rubrica-accesibilidad.md): keyboard, focus, screen reader, contrast, timeouts. Anchored to WCAG 2.2.
-2. [Deceptive patterns](metodo/rubrica-patrones-enganosos.md): declared identity, cost of the path to a human, data taken before any help, difficulty of leaving, usability of the answer.
-3. [Operational truthfulness](metodo/rubrica-veracidad-operativa.md): whether the bot knows what it claims to know, and does what it claims to have done.
+<h3><img src="images/h-rubrics.png" alt="Three rubrics" width="800"></h3>
 
-Methodological base: [taxonomy of failures in an agentic system](metodo/taxonomia-de-fallas.md).
+♿ **[Accessibility](metodo/rubrica-accesibilidad.md).** Keyboard, focus, screen reader, contrast, timeouts. Anchored to [WCAG 2.2](https://www.w3.org/TR/WCAG22/).
 
-## Status
+🎭 **[Deceptive patterns](metodo/rubrica-patrones-enganosos.md).** Declared identity, cost of the path to a human, data taken before any help, difficulty of leaving, usability of the answer.
 
-Rubrics v1.0 published. Per-site reports: in progress. Published: [IKEA](fichas/ikea/ficha.md) and [Ryanair](fichas/ryanair/ficha.md).
+🔍 **[Operational truthfulness](metodo/rubrica-veracidad-operativa.md).** Whether the bot knows what it claims to know, and does what it claims to have done.
 
-## Results
+Methodological base: the [taxonomy of failures in an agentic system](metodo/taxonomia-de-fallas.md).
 
-| site | accessibility | deceptive patterns | operational truthfulness | audited | report |
-|---|---|---|---|---|---|
-| IKEA Spain | n/a (not run yet) | 8 out of 10 applicable | 10 out of 10 applicable | 2026-08-26 | [report](fichas/ikea/ficha.md) |
-| Ryanair | 5 out of 8 applicable | 5 out of 10 applicable | 7 out of 8 applicable | 2026-08-26 | [report](fichas/ryanair/ficha.md) |
+<h3 id="results"><img src="images/h-results.png" alt="Results" width="800"></h3>
 
-Higher is better. Each criterion scores 2, 1 or 0, so the maximum is twice the number of applicable criteria.
+<p align="center"><img src="images/results.png" alt="IKEA Spain, audited 2026-08-26: accessibility not run yet, deceptive patterns 8 out of 10, operational truthfulness 10 out of 10. Ryanair, audited 2026-08-26: accessibility 5 out of 8, deceptive patterns 5 out of 10, operational truthfulness 7 out of 8." width="800"></p>
 
-## Method
+Each criterion scores 2, 1 or 0. A criterion that could not be tested is n/a, and n/a never counts as zero: the score reads "X out of Y applicable". Higher is better.
 
-Always a fictional persona. Forensic tone: measurable data and evidence, never adjectives. Per-criterion scale of 2/1/0 plus n/a, and n/a never counts as zero.
+📄 Full reports, with transcripts and evidence: [IKEA Spain](fichas/ikea/ficha.md) · [Ryanair](fichas/ryanair/ficha.md). More sites in progress.
 
-## Language
+<h3><img src="images/h-method.png" alt="Method" width="800"></h3>
 
-This page and the three rubrics are in English.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="images/persona-dark.png">
+  <img src="images/persona-light.png" alt="Always a fictional persona. No real customer data ever reaches an audited bot. Every score points to its evidence." width="800">
+</picture>
 
-Per-site reports and transcripts stay in the language the bot answered in. Translating a transcript would falsify the evidence.
+🧪 **Forensic tone.** Measurable data and evidence, never adjectives.
 
-## License
+🌐 **Original language.** This page and the rubrics are in English. Reports and transcripts stay in the language the bot answered in: translating a transcript would falsify the evidence.
 
-[CC BY 4.0](LICENSE). Reuse it, citing the source.
+<h3><img src="images/h-reach.png" alt="Reach out" width="800"></h3>
+
+Know a support bot worth auditing? Think a score is wrong? Let me know!
+
+- 🐛 [Open an issue](https://github.com/missyeahhh/chatbot-observatory/issues): suggest a site, challenge a score, ask about the method.
+- 💬 [Message me on LinkedIn](https://www.linkedin.com/in/soldr): feedback, or how you would use it.
+
+---
+
+🎨 Made by [Soledad De Rosa](https://www.linkedin.com/in/soldr). Built with [Claude Code](https://claude.com/claude-code). [CC BY 4.0](LICENSE): reuse it, citing the source.
