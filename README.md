@@ -2,7 +2,7 @@
 
 <p align="center">
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY%204.0-4a5568" alt="License: CC BY 4.0"></a>
-<a href="metodo/"><img src="https://img.shields.io/badge/rubrics-v1.0-4a5568" alt="Rubrics v1.0"></a>
+<a href="metodo/"><img src="https://img.shields.io/badge/rubrics-v1.1-4a5568" alt="Rubrics v1.1"></a>
 <a href="#results"><img src="https://img.shields.io/badge/sites%20audited-2-4a5568" alt="Sites audited: 2"></a>
 </p>
 
@@ -24,7 +24,7 @@ Methodological base: the [taxonomy of failures in an agentic system](metodo/taxo
 
 <p align="center"><img src="images/results.png" alt="IKEA Spain, audited 2026-08-26: accessibility not run yet, deceptive patterns 8 out of 10, operational truthfulness 10 out of 10. Ryanair, audited 2026-08-26: accessibility 5 out of 8, deceptive patterns 5 out of 10, operational truthfulness 7 out of 8." width="800"></p>
 
-Each criterion scores 2, 1 or 0. A criterion that could not be tested is n/a, and n/a never counts as zero: the score reads "X out of Y applicable". Higher is better.
+Each criterion scores 2, 1 or 0. A criterion that could not be tested is n/a. A criterion that was tested but whose behaviour fits no score is a gap, recorded with its evidence in the [rubric gaps file](metodo/huecos-de-rubrica-piloto.md). Neither counts as zero: the score reads "X out of Y applicable". Higher is better.
 
 📄 Full reports, with transcripts and evidence: [IKEA Spain](fichas/ikea/ficha.md) · [Ryanair](fichas/ryanair/ficha.md). More sites in progress.
 
