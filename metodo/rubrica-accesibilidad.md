@@ -1,6 +1,8 @@
 # Rubric 1: accessibility
 
-**v1.0, 23/8/2026.** Criteria drafted by Claude, reviewed and approved by Sol the same day.
+**v1.1, 8/10/2026.** Adds the `gap` mark to the scale. No criterion changes. Why: [rubric gaps found in the pilot](huecos-de-rubrica-piloto.md).
+
+v1.0, 23/8/2026: criteria drafted by Claude, reviewed and approved by Sol the same day.
 
 It measures one thing: **whether a person who does not use a mouse, or does not see the screen, can open the chat, talk, and leave.**
 
@@ -18,9 +20,11 @@ Out of scope in v1, for cost, not for lack of interest:
 
 ## Scale
 
-Per criterion: **2 passes, 1 partial, 0 fails, n/a could not be tested.**
+Per criterion: **2 passes, 1 partial, 0 fails, n/a could not be tested, gap tested but the behaviour fits no score.**
 
-**Hard rule: `n/a` is never counted as 0.** The score is written as "X out of Y applicable", never out of a theoretical maximum. Same rule as rubric 3.
+**Hard rule: `n/a` and `gap` are never counted as 0.** Both are left out of the applicable criteria. The score is written as "X out of Y applicable", never out of a theoretical maximum. Same rule as rubric 3.
+
+A `gap` is always recorded with its evidence in the [rubric gaps file](huecos-de-rubrica-piloto.md), so that the scale can be revised with cases from more than one site.
 
 ## The five criteria
 

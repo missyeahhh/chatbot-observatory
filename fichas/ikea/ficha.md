@@ -10,7 +10,7 @@
 | bot | "Billie", se declara "chatbot de IKEA con IA" |
 | corrida 1 | 2026-08-26, 03:15 a 03:30 CEST (madrugada) |
 | corrida 2 | 2026-08-26, 12:09 a 12:15 CEST (horario de agentes) |
-| método | rúbricas v1.0 del observatorio, persona ficticia, buzón desechable |
+| método | rúbricas v1.1 del observatorio (re-puntuada el 8/10/2026, era v1.0), persona ficticia, buzón desechable |
 | evidencia | [transcript](evidencia/transcript-2026-08-26.md) y demás en `evidencia/` |
 
 ## Límites declarados
@@ -67,9 +67,15 @@ Subió de 7: D2 re-verificado en horario de agentes.
 
 ---
 
-## Criterios n/a
+## Criterios n/a y gap
 
 Ninguno formal en ninguna corrida. Rúbrica 1 (accesibilidad) sigue pendiente: requiere corrida manual con Sol y VoiceOver.
+
+---
+
+## Re-puntuación con las rúbricas v1.1 (8/10/2026)
+
+Releída la evidencia, sin volver a correr nada. La v1.1 solo suma la marca **gap** (se probó y el comportamiento no entra en la escala). Ningún criterio de IKEA estaba en ese caso, así que no se movió nada: R2 8/10 y R3 10/10, igual que con la v1.0.
 
 ---
 *Corridas 1 y 2 de 2, completas (03:15 y 12:09 CEST del 26/8/2026). D2 subió de 1 a 2 en la re-verificación; D4 se confirmó en 1 con click real. Sin ningún 0 en ninguna corrida. Capturas de imagen pendientes de una sesión interactiva de Sol (ver "Límites declarados").*

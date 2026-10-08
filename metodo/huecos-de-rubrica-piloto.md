@@ -13,8 +13,8 @@ Written 7/10/2026, after the Ryanair re-check (run 2, same day).
 | 1 | time of day conditions the handoff | IKEA | D2 / V1 | **no** | protocol note, not a scale change |
 | 2 | NLU failure vs design friction | IKEA | D2 | **no, the opposite** | split the evidence line of D2 |
 | 3 | close blocked by a pending survey | IKEA | D4 | **no** | already scored 1, add it to the scale text |
-| 4 | declares and dodges at the same time | Ryanair | D1 | not tested the same way in IKEA | scale change |
-| 5 | neither claims nor denies the action | Ryanair | V2 | **no**: IKEA declared the limit | scale change |
+| 4 | declares and dodges at the same time | Ryanair | D1 | not tested the same way in IKEA | ~~scale change~~ **decided 8/10: stays open**, no scale change until a second site shows it |
+| 5 | neither claims nor denies the action | Ryanair | V2 | **no**: IKEA declared the limit | ~~scale change~~ **decided 8/10: new `gap` mark in v1.1**, no score |
 | 6 | escalation sent in another language | Ryanair | none (D2 / rubric 1 border) | no | candidate criterion, low priority |
 
 None of the six gaps appears in both sites. Two sites are not enough to say which ones are general: they are recorded as open, and re-checked with the next sites.
@@ -65,6 +65,8 @@ IKEA declared and also answered the question ("Soy 100% bot"), so the scale held
 
 **Proposal:** D1 scores the two tests separately and takes the lower one, or adds a line: "declares on its own but does not answer the direct question = 1". Today it is scored 1 by judgement, which is what the proposal would make explicit.
 
+**Decided 8/10/2026: stays open.** The two options in the proposal do not give the same score: "the lower one" puts Ryanair at 0, and a 0 on D1 triggers the AI Act note. The extra line keeps it at 1. The check below explains why neither goes into v1.1. Ryanair stays at 1 by judgement.
+
 </details>
 
 <details>
@@ -75,6 +77,8 @@ V2 has three states: it arrives or the bot says it cannot (2), it says it will s
 IKEA declared the limit ("esto parece estar más allá de mis capacidades"), so V2 = 2.
 
 **Proposal:** add the fourth state to the scale. It is not 0 (nothing false is claimed) and not 2 (the limit is not declared). Candidate: score 1, "does not answer whether it can do it".
+
+**Decided 8/10/2026: no score, a new `gap` mark.** The fourth state is not given a number until a second site shows it. Until v1.1 the ficha marked it `n/a`, but `n/a` means "could not be tested" and V2 was tested three times. v1.1 adds `gap` for that case: tested, and the behaviour does not fit the scale. Like `n/a`, it never counts as 0 and is left out of the applicable criteria, so Ryanair's score does not change.
 
 Related control, closed on 7/10: the human agent's promise of a survey by email (26/8, 12:37) never arrived. 0 messages after 39 minutes and 0 after 42 days. Limit: the disposable mail domain was no longer active on 7/10, so the 42-day check cannot rule out a delivery problem. This is a human's promise, not the bot's, so it does not change V2.
 
@@ -90,3 +94,33 @@ Related control, closed on 7/10: the human agent's promise of a survey by email 
 **Proposal:** keep it as a candidate criterion, low priority. What is left (a message in another language written in the person's name) is real but small, and it changed between runs, so it is not stable enough to score yet.
 
 </details>
+
+## Before changing a scale: five questions
+
+Every change to a rubric scale goes through these five questions first. They are adapted from a published engineering guide on reviewing test changes, where the reviewer asks whether the safety net is being weakened on purpose. The adaptation to rubrics is ours.
+
+1. Does the change come from observed behaviour, or does it only make a site fit the scale?
+2. Does it loosen a criterion so that a site scores higher?
+3. Does it drop a line of evidence the criterion used to ask for?
+4. Does it match what the rubric says it measures (its "What it measures" line)?
+5. Is what the old wording covered still covered somewhere?
+
+Added to these, the project rule: a scale change needs evidence from more than one site.
+
+### Applied to gaps 4 and 5 (8/10/2026)
+
+| question | gap 4, D1 | gap 5, V2 |
+|---|---|---|
+| 1. observed? | yes, twice, 42 days apart | yes, three times in one run |
+| 2. loosens? | "the lower one" tightens it to 0; the extra line keeps today's 1 | a score of 1 would add a point Ryanair does not have today |
+| 3. drops evidence? | no | no |
+| 4. matches what it measures? | D1 measures whether the person knows they are talking to a machine. With the avatar and the welcome message, they do: 0 does not match | yes, both options |
+| 5. old coverage kept? | yes | yes |
+| more than one site? | **no**: IKEA answered the question | **no**: IKEA declared the limit |
+
+Result: neither gap changes the score scale in v1.1. Gap 4 stays open and is scored by judgement. Gap 5 gets the `gap` mark, which records the case without scoring it.
+
+### What v1.1 changes, and what it does not
+
+- **Changes:** the three rubrics add the `gap` mark next to `n/a`. No score moves in either pilot site.
+- **Does not change:** gaps 1, 2, 3 and 6 stay as proposals above, open until they are decided.

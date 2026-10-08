@@ -17,4 +17,4 @@ Ficha del observatorio para el chatbot de soporte de IKEA España ("Billie", pro
 
 ## Método
 
-Rúbricas v1.0 del observatorio (en `metodo/`), persona ficticia, buzón desechable. Sin capturas de imagen en corrida automática (limitación documentada en [ficha.md](ficha.md)).
+Rúbricas v1.1 del observatorio (en `metodo/`), persona ficticia, buzón desechable. Sin capturas de imagen en corrida automática (limitación documentada en [ficha.md](ficha.md)).

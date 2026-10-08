@@ -19,4 +19,4 @@ Ficha del observatorio para el chatbot de soporte de Ryanair. **Ficha escrita el
 
 ## Método
 
-Rúbricas v1.0 del observatorio (en `metodo/`), persona ficticia, buzón desechable.
+Rúbricas v1.1 del observatorio (en `metodo/`), persona ficticia, buzón desechable.
