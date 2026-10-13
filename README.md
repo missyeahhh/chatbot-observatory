@@ -1,7 +1,7 @@
 <p align="center"><img src="images/header.png" alt="Support Chatbot Observatory, by sol. Audited in public. Evidence, not adjectives."></p>
 
 <p align="center">
-<a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY%204.0-4a5568" alt="License: CC BY 4.0"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC%204.0-4a5568" alt="License: CC BY-NC 4.0"></a>
 <a href="metodo/"><img src="https://img.shields.io/badge/rubrics-v1.1-4a5568" alt="Rubrics v1.1"></a>
 <a href="#results"><img src="https://img.shields.io/badge/sites%20audited-2-4a5568" alt="Sites audited: 2"></a>
 </p>
@@ -48,4 +48,4 @@ Know a support bot worth auditing? Think a score is wrong? Let me know!
 
 ---
 
-🎨 Made by [Soledad De Rosa](https://www.linkedin.com/in/soldr). Built with [Claude Code](https://claude.com/claude-code). [CC BY 4.0](LICENSE): reuse it, citing the source.
+🎨 Made by [Soledad De Rosa](https://www.linkedin.com/in/soldr). Built with [Claude Code](https://claude.com/claude-code). [CC BY-NC 4.0](LICENSE): reuse it for non-commercial purposes, citing the source. Content published before 2026-10-13 stays under CC BY 4.0. For commercial use, [get in touch](https://www.linkedin.com/in/soldr).
